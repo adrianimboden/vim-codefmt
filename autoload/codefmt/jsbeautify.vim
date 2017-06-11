@@ -40,7 +40,7 @@ function! codefmt#jsbeautify#GetFormatter() abort
   " {endline}.
   " @throws ShellError
   function l:formatter.FormatRange(startline, endline) abort
-    let l:cmd = [s:plugin.Flag('js_beautify_executable'), '-f', '-']
+    let l:cmd = [s:plugin.Flag('js_beautify_executable'), '--e4x', '-f', '-']
     if &filetype != ""
       let l:cmd = l:cmd + ['--type', &filetype]
     endif
